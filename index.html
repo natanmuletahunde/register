@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Registration Form</title>
+    <style>
+        .navbar-custom {
+            background-color: indigo;
+            padding: 2rem 0; /* Adjust padding to increase navbar height */
+        }
+        .navbar-custom .navbar-brand {
+            color: white;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem; /* Increase font size for the <h1> tag */
+        }
+        .navbar-custom .navbar-brand img {
+            width: 60px; /* Increase image width */
+            height: 60px; /* Increase image height */
+            margin-right: 15px; /* Adjust spacing if needed */
+            border-radius: 50%; /* Make image circular */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-custom {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-custom .footer-sections {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            justify-content: center;
+            width: 100%;
+        }
+        .footer-custom h1 {
+            color: blue;
+            margin-bottom: 20px;
+        }
+        .footer-custom p {
+            margin-bottom: 10px;
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .membership-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .membership-list li {
+            display: flex;
+            align-items: center;
+        }
+        .membership-list li input[type="checkbox"] {
+            margin-left: 10px;
+        }
+        .btn-primary {
+            margin-bottom: 30px; /* Add margin to the button */
+        }
+        .footer-note {
+            color: white; /* Text color */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Blur effect */
+            margin-top: 30px; /* Space above the text */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom mb-4">
+        <div class="container">
+            <h1 class="navbar-brand">
+                <img src="image/football.jpg" alt="Logo"> 
+                Membership Form <br>Football Club
+            </h1>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="mb-4 text-center">Register</h1>
+        <form>
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="address" class="form-label">Full Address</label>
+                <input type="text" class="form-control" id="address" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="nationality" class="form-label">Nationality</label>
+                <input type="text" class="form-control" id="nationality" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="cityCountry" class="form-label">City/Country</label>
+                <input type="text" class="form-control" id="cityCountry" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <!-- Moved footer note -->
+        <p class="footer-note">Football Club</p>
+    </div>
+
+    <footer class="footer-custom">
+        <div class="footer-sections">
+            <div class="footer-content">
+                <h1>Type of Membership</h1>
+                <p>Choose your type of membership</p>
+                <ul class="membership-list">
+                    <li>
+                        <label for="regular">
+                            Regular (3 months)
+                            <input type="checkbox" id="regular">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="gold">
+                            Gold (6 months)
+                            <input type="checkbox" id="gold">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="platinum">
+                            Platinum (12 months)
+                            <input type="checkbox" id="platinum">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h1>Term & Condition</h1>
+                <p>This membership is valid.</p>
+                <p>Membership is not automatic.</p>
+                <p>Membership includes the facilities available.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq5a6LUj8tPGA9aD2h9A34/SvCz49x9n0zT3jcJ2s1mcDz22f" crossorigin="anonymous"></script>
+</body>
+</html>
